@@ -9,13 +9,13 @@ class Anvio < Formula
   depends_on :python3
   depends_on :fortran
   depends_on "prodigal"
-  depends_on "hmmer"
+  depends_on "merenlab/anvio/hmmer"
   depends_on "sqlite"
   depends_on "gsl"
   depends_on "hdf5"
   depends_on "diamond"
-  depends_on "mcl"
-  depends_on "muscle"
+  depends_on "merenlab/anvio/mcl"
+  depends_on "merenlab/anvio/muscle"
   depends_on "blast"
   depends_on "numpy"
   depends_on "scipy"
