@@ -5,6 +5,7 @@ class Hmmer < Formula
   sha256 "dd16edf4385c1df072c9e2f58c16ee1872d855a018a2ee6894205277017b5536"
 
   bottle do
+    root_url "https://data.merenlab.org/homebrew-anvio"
     cellar :any_skip_relocation
     sha256 "1c155b07d402dd3beba50ba5deb707c46d61859dc1288fd621c08c8036c27dfe" => :high_sierra
   end

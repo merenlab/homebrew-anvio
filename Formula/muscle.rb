@@ -5,6 +5,7 @@ class Muscle < Formula
   sha256 "c70c552231cd3289f1bad51c9bd174804c18bb3adcf47f501afec7a68f9c482e"
 
   bottle do
+    root_url "https://data.merenlab.org/homebrew-anvio"
     cellar :any_skip_relocation
     rebuild 1
     sha256 "d555f82b3faf22a008af7613ce5d1a33a0170df31dc6187d1c8b011b6b2e7c43" => :high_sierra
