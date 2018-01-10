@@ -6,6 +6,11 @@ class Anvio < Formula
   sha256 "d5790f60e221fffcbea4bb310dd672eaeb253e8d3f280e15b3da4a779e30fc49"
   head "https://github.com/merenlab/anvio.git"
 
+  bottle do
+    root_url "https://data.merenlab.org/homebrew-anvio"
+    sha256 "4d1d302c5e1abe1a781934252e5cd5c1660f6908ca6c2538864080242e3cd9de" => :high_sierra
+  end
+
   depends_on :python3
   depends_on :fortran
   depends_on "prodigal"
