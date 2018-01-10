@@ -7,7 +7,7 @@ class Muscle < Formula
   bottle do
     root_url "https://data.merenlab.org/homebrew-anvio"
     cellar :any_skip_relocation
-    rebuild 1
+    sha256 "79b0c424f3f17b844c125cb5aef32a4192cd270467d4d77637ba3457ecfda06b" => :sierra
     sha256 "d555f82b3faf22a008af7613ce5d1a33a0170df31dc6187d1c8b011b6b2e7c43" => :high_sierra
   end
 
