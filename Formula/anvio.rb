@@ -1,9 +1,9 @@
 class Anvio < Formula
   include Language::Python::Virtualenv
-  desc "Analysis and visualization platform for ‘omics data."
+  desc "Analysis and visualization platform for ‘omics data"
   homepage "http://merenlab.org/projects/anvio/"
-  url "https://files.pythonhosted.org/packages/16/45/a0378836eb14fceed15f8179da5dee6edf6e63bacaa5f9a062bca1f7ad57/anvio-3.tar.gz"
-  sha256 "d5790f60e221fffcbea4bb310dd672eaeb253e8d3f280e15b3da4a779e30fc49"
+  url "https://files.pythonhosted.org/packages/63/75/3a79f2474b59bd7edd4485afb1028ff610068dfde5d1495b754cf701bceb/anvio-4.tar.gz"
+  sha256 "918f1bae6b521cd6dbd8d407c65fd94cd6c26cb6e34176927cc5f6c88147c2e0"
   head "https://github.com/merenlab/anvio.git"
 
   bottle do
@@ -13,8 +13,8 @@ class Anvio < Formula
     sha256 "4d1d302c5e1abe1a781934252e5cd5c1660f6908ca6c2538864080242e3cd9de" => :high_sierra
   end
 
-  depends_on :python3
-  depends_on :fortran
+  depends_on "python3"
+  depends_on "gcc"
   depends_on "prodigal"
   depends_on "merenlab/anvio/hmmer"
   depends_on "sqlite"
@@ -28,8 +28,8 @@ class Anvio < Formula
   depends_on "scipy"
 
   resource "bottle" do
-    url "https://files.pythonhosted.org/packages/a1/f6/0db23aeeb40c9a7c5d226b1f70ce63822c567178eee5b623bca3e0cc3bef/bottle-0.12.11.tar.gz"
-    sha256 "a1958f9725042a9809ebe33d7eadf90d1d563a8bdd6ce5f01849bff7e941a731"
+    url "https://files.pythonhosted.org/packages/bd/99/04dc59ced52a8261ee0f965a8968717a255ea84a36013e527944dbf3468c/bottle-0.12.13.tar.gz"
+    sha256 "39b751aee0b167be8dffb63ca81b735bbf1dd0905b3bc42761efedee8f123355"
   end
 
   resource "pysam" do
@@ -38,18 +38,18 @@ class Anvio < Formula
   end
 
   resource "ete3" do
-    url "https://files.pythonhosted.org/packages/f0/c5/e1bb20c02f0e7cd924eab783901b4e2acf8fda79c0f7c7303b740bf7b98e/ete3-3.0.0b35.tar.gz"
-    sha256 "f9f055f5865d00afb8882e0ea128dea2df6fba2e31e3486392a282a2aa90dc18"
+    url "https://files.pythonhosted.org/packages/21/17/3c49b7fafe10ed63bb7904ebf9764b98db726aa5fd482fb006818854bc04/ete3-3.1.1.tar.gz"
+    sha256 "870a3d4b496a36fbda4b13c7c6b9dfa7638384539ae93551ec7acb377fb9c385"
   end
 
   resource "scikit-learn" do
-    url "https://files.pythonhosted.org/packages/f1/dc/5fb2834511eef6f86e17b6ec41c0c7a60733f79633827e75aaa55029a9fa/scikit-learn-0.18.1.tar.gz"
-    sha256 "1eddfc27bb37597a5d514de1299981758e660e0af56981c0bfdf462c9568a60c"
+    url "https://files.pythonhosted.org/packages/f5/2c/5edf2488897cad4fb8c4ace86369833552615bf264460ae4ef6e1f258982/scikit-learn-0.19.1.tar.gz"
+    sha256 "5ca0ad32ee04abe0d4ba02c8d89d501b4e5e0304bdf4d45c2e9875a735b323a0"
   end
 
   resource "Django" do
-    url "https://files.pythonhosted.org/packages/3b/14/6c1e7508b1342afde8e80f50a55d6b305c0755c702f741db6094924f7499/Django-1.10.4.tar.gz"
-    sha256 "fff7f062e510d812badde7cfc57745b7779edb4d209b2bc5ea8d954c22305c2b"
+    url "https://files.pythonhosted.org/packages/21/eb/534ac46e63c51eabbfc768d8c11cc851275f9047c8eaaefc17c41845987f/Django-2.0.2.tar.gz"
+    sha256 "dc3b61d054f1bced64628c62025d480f655303aea9f408e5996c339a543b45f0"
   end
 
   resource "Cython" do
