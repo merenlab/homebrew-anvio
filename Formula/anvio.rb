@@ -13,7 +13,7 @@ class Anvio < Formula
     sha256 "de9e8241df6ee3e96946fd71eabe4cf5d5b07841b90a5b72190f5d47a5204996" => :high_sierra
   end
 
-  depends_on "python3"
+  depends_on "python"
   depends_on "gcc"
   depends_on "prodigal"
   depends_on "merenlab/anvio/hmmer"
