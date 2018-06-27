@@ -192,6 +192,7 @@ class Anvio < Formula
     ENV.prepend_path "PYTHONPATH", Formula["scipy"].opt_lib/"python#{version}/site-packages"
 
     virtualenv_install_with_resources
+    bin.install_symlink libexec/"bin/average_nucleotide_identity.py"
   end
 
   test do
