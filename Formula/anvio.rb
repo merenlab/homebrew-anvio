@@ -2,8 +2,8 @@ class Anvio < Formula
   include Language::Python::Virtualenv
   desc "Analysis and visualization platform for ‘omics data"
   homepage "http://merenlab.org/projects/anvio/"
-  url "https://files.pythonhosted.org/packages/9a/ae/faefe679258faa3187cdacad300f2a4a0e1b2cf817413bdf1e6a0fa48b84/anvio-5.tar.gz"
-  sha256 "410abf574d50c29207abaef97f92b0344f09d373dce832e490fe20f7b3fa6440"
+  url "https://files.pythonhosted.org/packages/4c/e3/2f3bddfcdde43a90574926a00261ad31c4dcff35496df511849e121641eb/anvio-5.1.tar.gz"
+  sha256 "9f2bc87e19ae2b15ba7299a1e137ae8e9ccf89bbd10cb40f392f0bf4f1091a2c"
   head "https://github.com/merenlab/anvio.git"
 
   bottle do
@@ -186,7 +186,6 @@ class Anvio < Formula
   end
 
   def install
-    inreplace "requirements.txt", "pysam==0.11.1", "pysam==0.14.1"
     ENV["HTSLIB_CONFIGURE_OPTIONS"] = "--disable-libcurl"
     ENV["HAVE_LIBCURL"] = "False"
     ENV.prepend_path "PYTHONPATH", Formula["numpy"].opt_lib/"python#{version}/site-packages"
