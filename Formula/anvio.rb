@@ -9,7 +9,7 @@ class Anvio < Formula
   bottle do
     root_url "https://data.merenlab.org/homebrew-anvio"
     sha256 "09fbcd2f6ca64b0d78952a9126db4650271c21479d22d90383ec9e67fad58f7e" => :el_capitan
-    sha256 "10718fea65f647e5799aaa264f63b6c2bf1e6b445e1fbed65ed5a93da06b5b7d" => :sierra
+    sha256 "9cb5ee7fa18ce5bb3d12c8599f7c996422b62b97d8d0df9da3df8fb62f446203" => :sierra
     sha256 "c1c4d79ee224076050a901aaf8c7c04d875ea99c02fdc182b8890c5578817986" => :high_sierra
   end
 
