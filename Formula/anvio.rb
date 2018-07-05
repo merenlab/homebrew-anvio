@@ -11,7 +11,7 @@ class Anvio < Formula
     root_url "https://data.merenlab.org/homebrew-anvio"
     sha256 "ab203f5e363d2b574c12fec691568a3c63589bdfaf3398e81e29603c276bbb7c" => :el_capitan
     sha256 "9cb5ee7fa18ce5bb3d12c8599f7c996422b62b97d8d0df9da3df8fb62f446203" => :sierra
-    sha256 "c1c4d79ee224076050a901aaf8c7c04d875ea99c02fdc182b8890c5578817986" => :high_sierra
+    sha256 "2e2478965274471b2d3b9bc65a3ec9cc2493e738f27676bce5169038c0f45066" => :high_sierra
   end
 
   depends_on "pkg-config" => :build
