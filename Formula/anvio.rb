@@ -39,9 +39,9 @@ class Anvio < Formula
     sha256 "39b751aee0b167be8dffb63ca81b735bbf1dd0905b3bc42761efedee8f123355"
   end
 
-  resource "pysam" do
-    url "https://files.pythonhosted.org/packages/fc/9b/4bb8d016406dcff47e2866e14d3dcb10741ec3920649e8c521996830944f/pysam-0.14.1.tar.gz"
-    sha256 "2e86f5228429d08975c8adb9030296699012a8deba8ba26cbfc09b374f792c97"
+  resource "Cython" do
+    url "https://files.pythonhosted.org/packages/b3/ae/971d3b936a7ad10e65cb7672356cff156000c5132cf406cb0f4d7a980fd3/Cython-0.28.3.tar.gz"
+    sha256 "1aae6d6e9858888144cea147eb5e677830f45faaff3d305d77378c3cba55f526"
   end
 
   resource "ete3" do
@@ -50,18 +50,13 @@ class Anvio < Formula
   end
 
   resource "scikit-learn" do
-    url "https://files.pythonhosted.org/packages/f5/2c/5edf2488897cad4fb8c4ace86369833552615bf264460ae4ef6e1f258982/scikit-learn-0.19.1.tar.gz"
-    sha256 "5ca0ad32ee04abe0d4ba02c8d89d501b4e5e0304bdf4d45c2e9875a735b323a0"
+    url "https://github.com/scikit-learn/scikit-learn/archive/f8adfa27ae8256f708a575f75927bd6f6fff6cd7.zip"
+    sha256 "22afe0092ccca6a7f5350bee0d803ac8118520d8b59202c7acba6533b5d5b974"
   end
 
   resource "Django" do
     url "https://files.pythonhosted.org/packages/21/eb/534ac46e63c51eabbfc768d8c11cc851275f9047c8eaaefc17c41845987f/Django-2.0.2.tar.gz"
     sha256 "dc3b61d054f1bced64628c62025d480f655303aea9f408e5996c339a543b45f0"
-  end
-
-  resource "Cython" do
-    url "https://files.pythonhosted.org/packages/b7/67/7e2a817f9e9c773ee3995c1e15204f5d01c8da71882016cac10342ef031b/Cython-0.25.2.tar.gz"
-    sha256 "f141d1f9c27a07b5a93f7dc5339472067e2d7140d1c5a9e20112a5665ca60306"
   end
 
   resource "h5py" do
@@ -105,13 +100,8 @@ class Anvio < Formula
   end
 
   resource "pandas" do
-    url "https://files.pythonhosted.org/packages/34/fd/0cb98ea4df08c82af3de93da5b9f79d573c6ecc05098905f9cd6b0bece51/pandas-0.20.1.tar.gz"
-    sha256 "42707365577ef69f7c9c168ddcf045df2957595a9ee71bc13c7997eecb96b190"
-  end
-
-  resource "datrie" do
-    url "https://files.pythonhosted.org/packages/44/5f/bf7e4711f6aa95edb2216b3487eeac719645802259643d341668e65636db/datrie-0.7.1.tar.gz"
-    sha256 "7a11371cc2dbbad71d6dfef57ced6e8b384bb377eeb847c63d58f8dc8e8b2023"
+    url "https://files.pythonhosted.org/packages/27/85/f9e4f0e47a6f1410b1d737b74a1764868e9197e3197a2be843507b505636/pandas-0.23.1.tar.gz"
+    sha256 "50b52af2af2e15f4aeb2fe196da073a8c131fa02e433e105d95ce40016df5690"
   end
 
   resource "appdirs" do
@@ -125,8 +115,8 @@ class Anvio < Formula
   end
 
   resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/4a/85/db5a2df477072b2902b0eb892feb37d88ac635d36245a72a6a69b23b383a/PyYAML-3.12.tar.gz"
-    sha256 "592766c6303207a20efc445587778322d7f73b161bd994f227adaa341ba212ab"
+    url "https://github.com/yaml/pyyaml/archive/3.13rc1.zip"
+    sha256 "8ee41c7fdc79cad4e5d6083369e97d0f6332b1c4b7f695a90accb38f00ffe34c"
   end
 
   resource "ratelimiter" do
@@ -185,12 +175,16 @@ class Anvio < Formula
   end
 
   def install
+    inreplace "requirements.txt", "scikit-learn==0.19.1", "scikit-learn==0.20.dev0"
+    inreplace "requirements.txt", "pandas==0.20.1", "pandas==0.23.1"
     ENV["HTSLIB_CONFIGURE_OPTIONS"] = "--disable-libcurl"
     ENV["HAVE_LIBCURL"] = "False"
     ENV.prepend_path "PYTHONPATH", Formula["numpy"].opt_lib/"python#{version}/site-packages"
     ENV.prepend_path "PYTHONPATH", Formula["scipy"].opt_lib/"python#{version}/site-packages"
 
     virtualenv_install_with_resources
+    system libexec/"bin/pip", "install", "https://github.com/pysam-developers/pysam/archive/24c0f2f010c1a39a6af9538ba54f61b97a675b56.zip"
+    system libexec/"bin/pip", "install", "https://github.com/ozcan/datrie/releases/download/0.7.1/datrie-0.7.1.tar.gz"
     bin.install_symlink libexec/"bin/average_nucleotide_identity.py"
   end
 
