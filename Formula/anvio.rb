@@ -2,8 +2,8 @@ class Anvio < Formula
   include Language::Python::Virtualenv
   desc "Analysis and visualization platform for ‘omics data"
   homepage "http://merenlab.org/projects/anvio/"
-  url "https://files.pythonhosted.org/packages/4c/e3/2f3bddfcdde43a90574926a00261ad31c4dcff35496df511849e121641eb/anvio-5.1.tar.gz"
-  sha256 "9f2bc87e19ae2b15ba7299a1e137ae8e9ccf89bbd10cb40f392f0bf4f1091a2c"
+  url "https://files.pythonhosted.org/packages/e0/15/a57179e855d4185e36bb83e982718260acf1334ac892e856cc18950d368a/anvio-5.2.tar.gz"
+  sha256 "2b74ec5977a2c0a047def37fb814e9cfc380f65c312cf9df95a2c75d271c7182"
   head "https://github.com/merenlab/anvio.git"
 
   bottle do
@@ -31,8 +31,8 @@ class Anvio < Formula
   depends_on "scipy"
 
   resource "matplotlib" do
-    url "https://files.pythonhosted.org/packages/ec/ed/46b835da53b7ed05bd4c6cae293f13ec26e877d2e490a53a709915a9dcb7/matplotlib-2.2.2.tar.gz"
-    sha256 "4dc7ef528aad21f22be85e95725234c5178c0f938e2228ca76640e5e84d8cde8"
+    url "https://files.pythonhosted.org/packages/eb/a0/31b6ba00bc4dcbc06f0b80d1ad6119a9cc3081ecb04a00117f6c1ca3a084/matplotlib-2.2.3.tar.gz"
+    sha256 "7355bf757ecacd5f0ac9dd9523c8e1a1103faadf8d33c22664178e17533f8ce5"
   end
 
   resource "bottle" do
@@ -45,14 +45,19 @@ class Anvio < Formula
     sha256 "1aae6d6e9858888144cea147eb5e677830f45faaff3d305d77378c3cba55f526"
   end
 
+  resource "pysam" do
+    url "https://files.pythonhosted.org/packages/73/59/c319f1bde3019bbce4583cecb12b9e3e52ffcfbe2c96d8b1fb131c0d4fb7/pysam-0.15.1.tar.gz"
+    sha256 "658421124c2f3de1b7445e03ca8413df0077f67ea9980abdaab0d1b5f7a8936f"
+  end
+
   resource "ete3" do
     url "https://files.pythonhosted.org/packages/21/17/3c49b7fafe10ed63bb7904ebf9764b98db726aa5fd482fb006818854bc04/ete3-3.1.1.tar.gz"
     sha256 "870a3d4b496a36fbda4b13c7c6b9dfa7638384539ae93551ec7acb377fb9c385"
   end
 
   resource "scikit-learn" do
-    url "https://github.com/scikit-learn/scikit-learn/archive/f8adfa27ae8256f708a575f75927bd6f6fff6cd7.zip"
-    sha256 "22afe0092ccca6a7f5350bee0d803ac8118520d8b59202c7acba6533b5d5b974"
+    url "https://github.com/scikit-learn/scikit-learn/archive/4035e60a6f0a0a2546bf0442ab603961c6a9cc4a.zip"
+    sha256 "989b15980b9abcf22c68fe0782166f05e06761627988324e2682308934777ded"
   end
 
   resource "Django" do
@@ -61,8 +66,8 @@ class Anvio < Formula
   end
 
   resource "h5py" do
-    url "https://files.pythonhosted.org/packages/34/07/4f8f6e4e478e9eabde25dea6b4478016e625b2dac6aaded78ba0316c86fe/h5py-2.8.0rc1.tar.gz"
-    sha256 "c36b99dba05027f21e254ee4d37c1909408d2a06c46bab6e5108e92f7de479fb"
+    url "https://files.pythonhosted.org/packages/74/5d/6f11a5fffc3d8884bb8d6c06abbee0b3d7c8c81bde9819979208ba823a47/h5py-2.8.0.tar.gz"
+    sha256 "e626c65a8587921ebc7fb8d31a49addfdd0b9a9aa96315ea484c09803337b955"
   end
 
   resource "cherrypy" do
@@ -70,14 +75,34 @@ class Anvio < Formula
     sha256 "dfad2f34e929836d016ae79f9e27aff250a8a71df200bf87c3e9b23541e091c5"
   end
 
+  resource "certifi" do
+    url "https://files.pythonhosted.org/packages/e1/0f/f8d5e939184547b3bdc6128551b831a62832713aa98c2ccdf8c47ecc7f17/certifi-2018.8.24.tar.gz"
+    sha256 "376690d6f16d32f9d1fe8932551d80b23e9d393a8578c5633a2ed39a64861638"
+  end
+
+  resource "chardet" do
+    url "https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz"
+    sha256 "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
+  end
+
+  resource "idna" do
+    url "https://files.pythonhosted.org/packages/65/c4/80f97e9c9628f3cac9b98bfca0402ede54e0563b56482e3e6e45c43c4935/idna-2.7.tar.gz"
+    sha256 "684a38a6f903c1d71d6d5fac066b58d7768af4de2b832e426ec79c30daa94a16"
+  end
+
+  resource "urllib3" do
+    url "https://files.pythonhosted.org/packages/3c/d2/dc5471622bd200db1cd9319e02e71bc655e9ea27b8e0ce65fc69de0dac15/urllib3-1.23.tar.gz"
+    sha256 "a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf"
+  end
+
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/5b/0b/34be574b1ec997247796e5d516f3a6b6509c4e064f2885a96ed885ce7579/requests-2.12.4.tar.gz"
-    sha256 "ed98431a0631e309bb4b63c81d561c1654822cb103de1ac7b47e45c26be7ae34"
+    url "https://files.pythonhosted.org/packages/54/1f/782a5734931ddf2e1494e4cd615a51ff98e1879cbe9eecbdfeaf09aa75e9/requests-2.19.1.tar.gz"
+    sha256 "ec22d826a36ed72a7358ff3fe56cbd4ba69dd7a6718ffd450ff0e9df7a47ce6a"
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/78/0a/aa90434c6337dd50d182a81fe4ae4822c953e166a163d1bf5f06abb1ac0b/psutil-5.1.3.tar.gz"
-    sha256 "959bd58bdc8152b0a143cb3bd822d4a1b8f7230617b0e3eb2ff6e63812120f2b"
+    url "https://files.pythonhosted.org/packages/e2/e1/600326635f97fee89bf8426fef14c5c29f4849c79f68fd79f433d8c1bd96/psutil-5.4.3.tar.gz"
+    sha256 "e2467e9312c2fa191687b89ff4bc2ad8843be4af6fb4dc95a7cc5f7d7a327b18"
   end
 
   resource "mistune" do
@@ -170,23 +195,47 @@ class Anvio < Formula
     sha256 "6461f93a842c649922c2c9a9bc9d9c4834110b89de8c4af196a791ab8f42ba3b"
   end
 
+  resource "jsonschema" do
+    url "https://files.pythonhosted.org/packages/58/b9/171dbb07e18c6346090a37f03c7e74410a1a56123f847efed59af260a298/jsonschema-2.6.0.tar.gz"
+    sha256 "6ff5f3180870836cae40f06fa10419f557208175f13ad7bc26caa77beb1f6e02"
+  end
+
+  resource "docutils" do
+    url "https://files.pythonhosted.org/packages/84/f4/5771e41fdf52aabebbadecc9381d11dea0fa34e4759b4071244fa094804c/docutils-0.14.tar.gz"
+    sha256 "51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274"
+  end
+
+  resource "smmap2" do
+    url "https://files.pythonhosted.org/packages/ad/e9/0fb974b182ff41d28ad267d0b4201b35159619eb610ea9a2e036817cb0b8/smmap2-2.0.4.tar.gz"
+    sha256 "dc216005e529d57007ace27048eb336dcecb7fc413cfb3b2f402bb25972b69c6"
+  end
+
+  resource "gitdb2" do
+    url "https://files.pythonhosted.org/packages/b9/36/4bdb753087a9232899ac482ee2d5da25f50b63998d661aa4e8170acd95b5/gitdb2-2.0.4.tar.gz"
+    sha256 "bb4c85b8a58531c51373c89f92163b92f30f81369605a67cd52d1fc21246c044"
+  end
+
+  resource "gitpython" do
+    url "https://files.pythonhosted.org/packages/4d/e8/98e06d3bc954e3c5b34e2a579ddf26255e762d21eb24fede458eff654c51/GitPython-2.1.11.tar.gz"
+    sha256 "8237dc5bfd6f1366abeee5624111b9d6879393d84745a507de0fda86043b65a8"
+  end
+
   resource "snakemake" do
-    url "https://files.pythonhosted.org/packages/56/26/9d93502155e0719d921fdccc8d99e1607cdf10f742a9fc6ce1819cd52aff/snakemake-4.7.0.tar.gz"
-    sha256 "a1c3245f47489219d212980f649ce435bc29b39638dade379e85f65a11c7e082"
+    url "https://files.pythonhosted.org/packages/f8/cd/f7659b2e83c053f663207102cb743d220447db9cb26fcafe74f6e6d6d946/snakemake-5.2.4.tar.gz"
+    sha256 "ff48ec6b227d9f1fb125c646c071a4f105ac62a3dfadec3d4eb70e1c5fef403e"
   end
 
   def install
-    inreplace "requirements.txt", "scikit-learn==0.19.1", "scikit-learn==0.20.dev0"
-    inreplace "requirements.txt", "pandas==0.20.1", "pandas==0.23.1"
+    inreplace "requirements.txt", "scikit-learn==0.19.2", "scikit-learn==0.21.dev0"
     ENV["HTSLIB_CONFIGURE_OPTIONS"] = "--disable-libcurl"
     ENV["HAVE_LIBCURL"] = "False"
     ENV.prepend_path "PYTHONPATH", Formula["numpy"].opt_lib/"python#{version}/site-packages"
     ENV.prepend_path "PYTHONPATH", Formula["scipy"].opt_lib/"python#{version}/site-packages"
 
     virtualenv_install_with_resources
-    system libexec/"bin/pip", "install", "https://github.com/pysam-developers/pysam/archive/24c0f2f010c1a39a6af9538ba54f61b97a675b56.zip"
     system libexec/"bin/pip", "install", "https://github.com/ozcan/datrie/releases/download/0.7.1/datrie-0.7.1.tar.gz"
     bin.install_symlink libexec/"bin/average_nucleotide_identity.py"
+    bin.install_symlink libexec/"bin/snakemake"
   end
 
   test do
