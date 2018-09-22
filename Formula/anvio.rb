@@ -7,11 +7,10 @@ class Anvio < Formula
   head "https://github.com/merenlab/anvio.git"
 
   bottle do
-    rebuild 1
     root_url "https://data.merenlab.org/homebrew-anvio"
-    sha256 "ab203f5e363d2b574c12fec691568a3c63589bdfaf3398e81e29603c276bbb7c" => :el_capitan
-    sha256 "455fd729a30f3510f3a792254b8924d0dafebd6b1f74f856785de2af3580d05a" => :sierra
-    sha256 "2e2478965274471b2d3b9bc65a3ec9cc2493e738f27676bce5169038c0f45066" => :high_sierra
+    sha256 "54ba1a3cc465dda217d30f6c4e5691ac726664e85dcf7c09ed6bf7a0683a649a" => :high_sierra
+    sha256 "1ea3ba9f3ee344c18b0e160664bd515a8c85a1271056e8ed09ff02dd3998506a" => :sierra
+    sha256 "f5be5a71a9b012f8f8c3884b96580857ce8a0f8729afb201d4e5a276a075d682" => :el_capitan
   end
 
   depends_on "pkg-config" => :build
