@@ -7,6 +7,7 @@ class Mcl < Formula
   bottle do
     root_url "https://data.merenlab.org/homebrew-anvio"
     cellar :any_skip_relocation
+    sha256 "28d9d46d59b55c04c1687bb3e23bab4ca3a2b68e9ed6597ffd71ba2e5c5a13f6" => :mojave
     sha256 "6cf42c2ebf9a63f278611e078a21b959d65aad9b566619b01eaed08148f8ce91" => :el_capitan
     sha256 "8ca6c295aa61e5f917685a8900ac0a665a0bcf720a32ef33367b232078efce16" => :sierra
     sha256 "d371a662ab31801a57443d2ddf4f568f64920576d989465a60f9b6033817f7be" => :high_sierra
